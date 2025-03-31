@@ -1,43 +1,31 @@
-# Chirpy Starter
+# devbubbang.github.io
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+개발자로 커리어 전환을 준비하며 공부한 내용을 기록하는 개인 블로그입니다.  
+이 블로그는 학습한 내용을 정리하고 기록하기 위해 만들어졌으며, 아직은 비공개 위주의 개인 공간으로 운영 중입니다.
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+## 📝 블로그 목적
+- 자격증 공부, 프로그래밍, 프로젝트 기록 등을 **스스로 정리**
+- 매일 혹은 주간 단위로 학습 내용을 마크다운으로 정리
+- 블로그 글을 포트폴리오 자료로 발전시킬 수 있도록 기반 마련
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+## 📌 주요 내용
+- **정보처리기사 자격증** 준비 과정 및 정리
+- **CS 이론 복습** (운영체제, 네트워크, 데이터베이스 등)
+- **개인 프로젝트 기획 및 개발기**
+- **IT 기획 업무** 중 공부한 개념/트렌드 정리
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+## 🛠 기술 스택
+- Jekyll + Chirpy 테마
+- GitHub Pages로 배포
+- 마크다운 기반 콘텐츠 작성
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+## 📚 카테고리 예시
+- `자격증`  
+- `프로그래밍 기초`  
+- `기획 정리`  
+- `사이드 프로젝트`  
+- `일상/기록`
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+---
 
-## Usage
-
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
-
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+> 본 블로그는 초기에는 개인 기록 용도로 운영되며, 추후 공개 전환될 수 있습니다.
