@@ -1,5 +1,5 @@
 ---
-title: "git commit"
+title: "버전 만들기 | commit"
 date: 2025-04-07 22:00:00 +0900
 categories: [Git, Version Management]
 tags: [Git, 명령어]
