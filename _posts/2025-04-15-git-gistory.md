@@ -1,5 +1,5 @@
 ---
-title: "분석도구 gisotry"
+title: "분석도구 gistory"
 date: 2025-04-15 23:15:00 +0900
 categories : [Git, Principal]
 tags: [Git, 원리]
