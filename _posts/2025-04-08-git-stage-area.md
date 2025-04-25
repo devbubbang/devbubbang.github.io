@@ -1,8 +1,8 @@
 ---
-title: "git stage area"
+title: "정말 중요한 공간 | git stage area"
 date: 2025-04-08 21:35:00 +0900
 categories: [Git, Version Management]
-tags: [Git, 명령어]
+tags: [Git]
 ---
 
 ## **버전 관리의 핵심**

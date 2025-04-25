@@ -2,7 +2,7 @@
 title: "변경 사항 확인하기 | log & diff"
 date: 2025-04-08 23:15:00 +0900
 categories: [Git, Version Management]
-tags: [Git, 명령어]
+tags: [Git]
 ---
 
 ## **커밋 기록 및 변경 내용 확인**
