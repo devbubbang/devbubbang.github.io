@@ -1,7 +1,7 @@
 ---
 title: AI 문서 분석 | NotebookLM
 date: 2025-05-08 21:47:00 +0900
-categories: [개발공부, AI]
+categories: [AI, Tools]
 tags: [AI]
 toc: true
 ---
