@@ -9,7 +9,6 @@
 - 블로그 글을 포트폴리오 자료로 발전시킬 수 있도록 기반 마련
 
 ## 📌 주요 내용
-- **정보처리기사 자격증** 준비 과정 및 정리
 - **CS 이론 복습** (운영체제, 네트워크, 데이터베이스 등)
 - **개인 프로젝트 기획 및 개발기**
 - **IT 기획 업무** 중 공부한 개념/트렌드 정리
@@ -19,12 +18,37 @@
 - GitHub Pages로 배포
 - 마크다운 기반 콘텐츠 작성
 
-## 📚 카테고리 예시
-- `자격증`  
-- `프로그래밍 기초`  
-- `기획 정리`  
-- `사이드 프로젝트`  
-- `일상/기록`
+## 📚 카테고리 및 게시물
+
+### Git
+- [Git 초기 설정하기](/posts/git-setup)
+- [Git 저장소 초기화](/posts/git-init)
+- [Git 스테이징 영역](/posts/git-stage-area)
+- [Git 커밋하기](/posts/git-commit)
+- [Git 로그와 변경사항 확인](/posts/git-log-diff)
+- [Git 리셋하기](/posts/git-reset)
+- [Git 변경사항 추가하기](/posts/git-add)
+- [Git 커밋 사용자 정보 수정](/posts/git-fix-commit-user)
+- [Git 커밋 작성자 설정](/posts/git-principal-name)
+- [Git 커밋 작성자 이메일 설정](/posts/git-principal-commit)
+- [Git 커밋 취소하기](/posts/git-commit-cancel)
+- [Git 히스토리 시각화](/posts/git-gistory)
+
+### AI
+- [AI - Lilys](/posts/AI-lilys)
+- [AI - Lumary](/posts/AI-lumary)
+- [AI - NotebookLM](/posts/AI-notebookLM)
+
+### CS
+- [운영체제 기초](/posts/CS-OS)
+- [컴퓨터 구조 - 하드웨어](/posts/CS-1d1l-hardware)
+- [컴퓨터 구조 - CA](/posts/CS-CA)
+
+### 자격증
+- [정보처리기사 자격증](/posts/lic-info)
+
+### Docker
+- [Docker 기초](/posts/Docker-base)
 
 ---
 
