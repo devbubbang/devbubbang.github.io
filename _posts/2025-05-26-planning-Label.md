@@ -6,16 +6,16 @@ tags: [AIP]
 toc: true
 ---
 
-# MS 문서/메일 보안 - AIP (Azure Information Protection)
+# MS 문서/메일 보안 - AIP <sup>Azure Information Protection</sup>
 
-Microsoft Purview Information Protection(MS AIP)에 대한 학습 자료.
+Microsoft Purview Information Protection<sup>MS AIP</sup>에 대한 학습 자료.
 
 ## 1강: Azure Information Protection 개요
 
 ### 1.1 Azure Information Protection이란?
 
-Microsoft Purview Information Protection은 이전의 Azure Information Protection(AIP)에서 발전된 솔루션.
-민감도 레이블(Sensitivity Labels)을 활용해 데이터를 보호하고 관리할 수 있는 서비스.
+Microsoft Purview Information Protection은 이전의 Azure Information Protection<sup>AIP</sup>에서 발전된 솔루션.
+민감도 레이블<sup>Sensitivity Labels</sup>을 활용해 데이터를 보호하고 관리할 수 있는 서비스.
 
 - 데이터 보호: 민감한 문서와 이메일을 보호하고, 분류하고, 권한을 설정
 - 보호 범위: 어디에 저장되었든, 누구와 공유하든 상관없이 데이터 보호
@@ -44,8 +44,8 @@ Microsoft Purview Information Protection은 이전의 Azure Information Protecti
 AIP에는 M365에 포함된 서비스와 단독 구매형인 플랜 1/ 플랜 2 라이선스가 있음.
 
 - M365 포함형: 추적 및 해지 기능 미포함
-- 플랜 1(P1): 수동 레이블링 제공
-- 플랜 2(P2): 자동 레이블링 제공
+- 플랜 1<sup>P1</sup>: 수동 레이블링 제공
+- 플랜 2<sup>P2</sup>: 자동 레이블링 제공
 
 ## 2강: AIP 개요 및 등장 배경
 
@@ -55,11 +55,11 @@ AIP에는 M365에 포함된 서비스와 단독 구매형인 플랜 1/ 플랜 2 
 
 1. 계정 보완: Active Directory
 2. 디바이스 제한: Device Intune
-3. 데이터 보호: WIP(Windows Information Protection), AIP(Azure Information Protection), DLP(Data Loss Prevention)
+3. 데이터 보호: WIP<sup>Windows Information Protection</sup>, AIP<sup>Azure Information Protection</sup>, DLP<sup>Data Loss Prevention</sup>
 
-- WIP (Windows Information Protection): 조직의 중요한 데이터가 의도적이거나 비의도적인 데이터 유출로부터 보호되도록 설계된 Microsoft의 데이터 보호 솔루션
-- AIP (Azure Information Protection): 민감도 레이블을 통해 데이터를 분류하고, 보호하고, 관리할 수 있는 클라우드 기반의 정보 보호 솔루션
-- DLP (Data Loss Prevention): 조직의 민감한 정보가 내부 또는 외부로 유출되지 않도록 보호하는 보안 기술
+- WIP <sup>Windows Information Protection</sup>: 조직의 중요한 데이터가 의도적이거나 비의도적인 데이터 유출로부터 보호되도록 설계된 Microsoft의 데이터 보호 솔루션
+- AIP <sup>Azure Information Protection</sup>: 민감도 레이블을 통해 데이터를 분류하고, 보호하고, 관리할 수 있는 클라우드 기반의 정보 보호 솔루션
+- DLP <sup>Data Loss Prevention</sup>: 조직의 민감한 정보가 내부 또는 외부로 유출되지 않도록 보호하는 보안 기술
 
 ### 2.2 레이블이란?
 
@@ -105,16 +105,16 @@ AIP에는 M365에 포함된 서비스와 단독 구매형인 플랜 1/ 플랜 2 
 민감도 레이블을 만들고 관리하기 위해서는 **Microsoft 365 규정 준수 센터**에서 특정 권한이 필요. 
 레이블을 생성하는 사용자에게는 다음과 같은 권한이 부여되어야 함:
 
-- 전역 관리자 (Global Admin): 조직 내 모든 데이터와 정책을 관리할 수 있는 권한 보유
-- 규정 준수 관리자 (Compliance Admin): Microsoft 365 규정 준수 센터에서 레이블을 생성하고 정책을 설정할 수 있는 권한 보유
-- 규정 준수 데이터 관리자 (Compliance Data Admin): 조직 내 데이터를 분석하고 보고할 수 있으며, 레이블 정책에 대한 데이터를 모니터링하고 관리할 수 있는 권한 보유
-- 데이터 보호 관리자 (Data Protection Admin): 데이터 보호 정책을 관리하고, 민감도 레이블을 설정할 수 있는 권한 보유
+- 전역 관리자 <sup>Global Admin</sup>: 조직 내 모든 데이터와 정책을 관리할 수 있는 권한 보유
+- 규정 준수 관리자 <sup>Compliance Admin</sup>: Microsoft 365 규정 준수 센터에서 레이블을 생성하고 정책을 설정할 수 있는 권한 보유
+- 규정 준수 데이터 관리자 <sup>Compliance Data Admin</sup>: 조직 내 데이터를 분석하고 보고할 수 있으며, 레이블 정책에 대한 데이터를 모니터링하고 관리할 수 있는 권한 보유
+- 데이터 보호 관리자 <sup>Data Protection Admin</sup>: 데이터 보호 정책을 관리하고, 민감도 레이블을 설정할 수 있는 권한 보유
 
 #### 전용 관리자 계정 설정
 
 - AIP 레이블을 설계하고 관리하는 담당자에게는 **Azure Information Protection 관리자** 계정이 필요
 - 해당 계정은 레이블 생성, 정책 배포, 권한 설정 등을 수행할 수 있는 권한 보유
-- 전용 관리자 계정은 보안성을 위해 강력한 암호 정책이 설정되어야 하며, 다중 인증(MFA)을 활성화해야 함
+- 전용 관리자 계정은 보안성을 위해 강력한 암호 정책이 설정되어야 하며, 다중 인증<sup>MFA</sup>을 활성화해야 함
 
 ##### E5 혹은 AIP P2 라이선스 있을 경우
 파일 및 전자 메일에 대해 자동 레이블 지정 기능 설정 가능.
