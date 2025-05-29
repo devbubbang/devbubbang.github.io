@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Min-log # the main title
 
-tagline: development🔥 # it will display as the subtitle
+tagline: 성장 일지🚀🔥 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   IT Knowledgement, License, etc Management Space
@@ -147,7 +147,7 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 10
+paginate: 10  
 
 # The base URL of your site
 baseurl: ""
