@@ -300,4 +300,56 @@
   .highlight .ss {
     color: #90a959;
   }
+
+  /* 애니메이션 효과 적용 */
+  .post-list {
+    .post-item {
+      @include fade-in;
+      @include hover-lift;
+      transition: transform 0.2s ease-out;
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .card {
+    @include hover-scale;
+    transition: transform 0.2s ease-out;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .sidebar {
+    .site-title {
+      @include pulse;
+    }
+  }
+
+  .btn {
+    @include hover-bright;
+    transition: filter 0.2s ease-out;
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
+  .tag {
+    @include hover-scale;
+    transition: transform 0.2s ease-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .categories {
+    .list-group-item {
+      @include hover-lift;
+      transition: transform 0.2s ease-out;
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
 }
