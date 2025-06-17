@@ -1,6 +1,6 @@
 ---
 title: "컴퓨터구조의 큰 그림"
-date: 2025-06-18 22:00:00 +0900
+date: 2025-06-17 21:10:00 +0900
 categories: [CS 지식, Computer Architecture]
 tags: [CS]
 toc: true
