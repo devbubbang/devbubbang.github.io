@@ -1,7 +1,7 @@
 ---
 title: 오답노트 md 양식 샘플
 date: 2025-04-01 22:37:00 +0900
-categories: [Git, 오답노트]
+categories: [Git - Min, 오답노트]
 tags: [Git, 오답노트]
 toc: true
 ---
