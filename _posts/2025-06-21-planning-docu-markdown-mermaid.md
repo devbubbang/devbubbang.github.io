@@ -4,6 +4,7 @@ date: 2025-06-21 15:45:00 +0900
 categories: [기획공부, Markdown]
 tags: [기획, mermaid]
 toc: true
+mermaid: true
 ---
 
 [참고 블로그 1](https://velog.io/@junho5336/Mermaid-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%84%A4%EA%B3%84%ED%95%98%EA%B8%B0) <br />
@@ -27,7 +28,7 @@ Mermaid로 그릴 수 있는 Diagram의 종류는 다음과 같음
 - 클래스 다이어그램 <sup>Class Diagram</sup>
 - User Journey Diagram
 
-### **플로우차트 <sup>Flowchart</sup> 작성법**
+### 1️⃣ **플로우차트 <sup>Flowchart</sup> 작성법**
 
 Mermaid에서 플로우차트를 작성하는 방법
 
@@ -80,6 +81,105 @@ graph TD
     B -- No --> D(처리 2);
     C --> E[종료];
     D --> E[종료];
+```
+
+---
+
+### 2️⃣ **시퀀스 다이어그램 <sup>Sequence Diagram</sup> 작성법**
+
+#### **1. 시퀀스 다이어그램이란?**
+
+여러 컴포넌트(참여자) 간의 상호작용을 시간의 흐름에 따라 표현하는 다이어그램. 주로 시스템의 동작 흐름, API 호출, 사용자와 시스템의 상호작용 등을 시각화할 때 사용.
+
+#### **2. 기본 선언 및 구조**
+
+시퀀스 다이어그램은 다음과 같이 선언
+
+```
+sequenceDiagram
+```
+
+시퀀스 다이어그램은 방향 선언이 필요 없으며, 위에서 아래로 시간이 흐름
+
+#### **3. 주요 구성요소**
+
+- **participant**: 시스템, 객체 등 참여자를 네모 박스로 표현
+- **actor**: 사용자 등 외부 참여자를 사람 아이콘으로 표현
+- **메시지**: 참여자 간의 상호작용(화살표, 점선, X표 등 다양한 형태)
+- **activation**: 특정 참여자가 활성화된 구간 표시 (activate, deactivate)
+- **autonumber**: 메시지에 자동으로 번호 부여
+
+##### **메시지 종류 예시**
+
+| 구문    | 의미                            | 용도                                |
+| ------- | ------------------------------- | ----------------------------------- |
+| A->B:   | 끝이 화살표 없는 실선           | 일반 메시지, 요청, 호출             |
+| A-->B:  | 끝이 화살표 없는 점선           | 일반 메시지(비동기/약한 연결)       |
+| A->>B:  | 끝이 화살표 있는 실선           | 응답, 결과 전달, 명확한 방향성 표시 |
+| A-->>B: | 끝이 화살표 있는 점선           | 비동기 응답, 약한 연결의 결과 전달  |
+| A-xB:   | 끝이 X로 표시되는 실선          | 실패, 취소, 종료 알림               |
+| A--xB:  | 끝이 X로 표시되는 점선          | 비동기 실패/취소 알림               |
+| A-)B:   | 끝이 열린 화살표인 실선 (async) | 비동기 메시지, 콜백, 이벤트 트리거  |
+| A--)B:  | 끝이 열린 화살표인 점선 (async) | 비동기 메시지(약한 연결), 콜백      |
+
+##### **Activation 예시**
+
+```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    activate John
+    John-->>Alice: Great!
+    deactivate John
+```
+
+##### **Autonumber 예시**
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor A as client
+    participant B as app
+    participant C as server
+    A->>B: 요청
+    B->>C: 처리
+    C-->>B: 응답
+    B-->>A: 결과 전달
+```
+
+#### **4. 전체 예시**
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor A as client
+    participant B as app
+    participant C as server
+    participant D as google
+    participant E as database
+    participant F as cloud server
+    A->>B: 파일 업로드 버튼 클릭
+    B->>A: 구글 로그인 popup 제공
+    A->>D: 구글 로그인
+    D->>B: ID 토큰 응답
+    B->>C: ID 토큰과 업로드 파일 전달
+    C->>D: ID 토큰 검증 요청
+    D->>C: ID 토큰 검증 결과 응답
+    alt is 검증 확인
+        C->>E: 정보 저장
+        E->>C: 정상 insert 확인 응답
+        C--)F: 파일 업로드
+        C->>B: 업로드 성공 응답
+        activate B
+        B->>B: 성공 UI 랜더링
+        deactivate B
+        B->>A: 성공 확인
+    else is 검증 실패
+        C->>B: 업로드 실패 응답
+        activate B
+        B->>B: 실패 UI 랜더링
+        deactivate B
+        B->>A: 실패 확인
+    end
 ```
 
 ---
