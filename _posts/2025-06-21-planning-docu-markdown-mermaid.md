@@ -7,8 +7,9 @@ toc: true
 mermaid: true
 ---
 
-[참고 블로그 1](https://velog.io/@junho5336/Mermaid-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%84%A4%EA%B3%84%ED%95%98%EA%B8%B0) <br />
-[참고 블로그 2](https://sabarada.tistory.com/209)
+[참고 블로그 1 - flowchart](https://velog.io/@junho5336/Mermaid-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%84%A4%EA%B3%84%ED%95%98%EA%B8%B0) <br />
+[참고 블로그 2 - flowchart](https://sabarada.tistory.com/209) <br />
+[참고 블로그 3 - sequence diagram](https://velog.io/@qhflrnfl4324/Mermaid%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%8B%9C%ED%80%80%EC%8A%A4-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB%9E%A8)
 
 ### **Mermaid란?**
 
