@@ -18,38 +18,6 @@
 - GitHub Pages로 배포
 - 마크다운 기반 콘텐츠 작성
 
-## 📚 카테고리 및 게시물
-
-### Git
-- [Git 초기 설정하기](/posts/git-setup)
-- [Git 저장소 초기화](/posts/git-init)
-- [Git 스테이징 영역](/posts/git-stage-area)
-- [Git 커밋하기](/posts/git-commit)
-- [Git 로그와 변경사항 확인](/posts/git-log-diff)
-- [Git 리셋하기](/posts/git-reset)
-- [Git 변경사항 추가하기](/posts/git-add)
-- [Git 커밋 사용자 정보 수정](/posts/git-fix-commit-user)
-- [Git 커밋 작성자 설정](/posts/git-principal-name)
-- [Git 커밋 작성자 이메일 설정](/posts/git-principal-commit)
-- [Git 커밋 취소하기](/posts/git-commit-cancel)
-- [Git 히스토리 시각화](/posts/git-gistory)
-
-### AI
-- [AI - Lilys](/posts/AI-lilys)
-- [AI - Lumary](/posts/AI-lumary)
-- [AI - NotebookLM](/posts/AI-notebookLM)
-
-### CS
-- [운영체제 기초](/posts/CS-OS)
-- [컴퓨터 구조 - 하드웨어](/posts/CS-1d1l-hardware)
-- [컴퓨터 구조 - CA](/posts/CS-CA)
-
-### 자격증
-- [정보처리기사 자격증](/posts/lic-info)
-
-### Docker
-- [Docker 기초](/posts/Docker-base)
-
 ---
 
 > 본 블로그는 초기에는 개인 기록 용도로 운영되며, 추후 공개 전환될 수 있습니다.
