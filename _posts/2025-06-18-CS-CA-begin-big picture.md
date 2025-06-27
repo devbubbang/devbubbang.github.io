@@ -1,12 +1,11 @@
 ---
 title: "시작하기 | 컴퓨터구조의 큰 그림"
 date: 2025-06-17 21:10:00 +0900
-categories: [CS 지식, Computer Architecture]
+categories: [CS지식, Computer Architecture]
 tags: [CS]
 toc: true
 mermaid: true
 ---
-
 > 해당 카테고리 문서는 인프런의 **[개발자를 위한 컴퓨터공학 1 : 혼자 공부하는 컴퓨터구조 + 운영체제](https://www.inflearn.com/course/%ED%98%BC%EC%9E%90-%EA%B3%B5%EB%B6%80%ED%95%98%EB%8A%94-%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/dashboard)**를 기반으로 학습
 
 ### **컴퓨터가 이해하는 두 가지 정보**
@@ -54,7 +53,7 @@ C --> I[입출력장치]
 
 > 메모리에 저장된 명령어를 읽어 드리고, 해석하고, 실행하는 부품
 
-- ALU <sup>산술 논리 연산 장치</sup> : 계산기
+- ALU `<sup>`산술 논리 연산 장치`</sup>` : 계산기
 - 레지스터 : CPU 내부의 작은 저장 장치
 - 제어장치 : **제어 신호**를 내보내고, 명령어를 해석하는 장치
   - 제어 신호? > 컴퓨터 부품들을 관리하고 작동시키기 위한 전기 신호
