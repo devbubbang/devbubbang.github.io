@@ -21,9 +21,9 @@ toc: true
 
 ---
 
-### **2. Git 설치**
+### **2. Git 설치 (Windows / Mac)**
 
-#### **기본 설치**
+#### **Windows - 기본 설치**
 
 - [https://git-scm.com/](https://git-scm.com/) 로 이동해서 Git을 다운로드
 - ⭐ 설치과정에서 **Git Bash** 반드시 포함 
@@ -39,20 +39,20 @@ git config --global core.autocrlf true
 ```
 - 협업 시 윈도우와 맥에서 엔터 방식 차이로 인한 오류 방지
 
-#### **SourceTree 설치**
+#### **Windows - SourceTree 설치**
 
 - [https://www.sourcetreeapp.com/](https://www.sourcetreeapp.com/) - Git을 GUI로 다룰 수 있도록 해주는 툴
   - 기타 : GitHub Desktop, GitKraken 등 (https://git-scm.com/downloads/guis 참조)
 - 설치 시 BitBucket 계정 관련은 건너뛰기
 
-#### **코드 에디터 설치**
+#### **Windows - 코드 에디터 설치**
 
 - 강의에서는 가장 인기있는 코드 에디터 중 하나인 VS Code 설치 > [https://code.visualstudio.com/](https://code.visualstudio.com/)
 - `터미널` 메뉴에서 새 터미널 열어보기
   - 프로그래밍 중 바로 Git 명령어 사용
   - 대부분의 타 에디터/IDE에서도 터미널 기능 제공
 
-#### **VS COde의 기본 터미널을 Git Bash로 설정**
+#### **Windows - VS COde의 기본 터미널을 Git Bash로 설정**
 
 > Git 뿐 아니라 다른 프로그래밍 작업에 있어서도 유용
 
@@ -64,5 +64,9 @@ git config --global core.autocrlf true
   - Git 등 프로그래밍 관련 소프트웨어들은 VS Code 뿐 아니라 기타 연계할 프로그램에서도 C 드라이브에 설치된 것으로 간주되므로, C 드라이브에 설치해야 위 문제를 비롯한 어려움을 겪지 않을 수 있음
 - ➕ Material 테마
   - VS Code에서 강의 영상의 화면과 같이 파일 탐색기 (파일 아이콘들) 부분이 보이게 하려면 왼쪽의 `확장` 탭 (블럭 모양 아이콘)에서 **Material Icon Theme** 테마를 검색하여 설치
+
+#### **Mac**
+
+🔹 작업 가능한 Mac 장비가 없기 때문에 현재 영상 시청 X, 이 후 Mac OS 사용 시 컨텐츠 추가
 
 ---
