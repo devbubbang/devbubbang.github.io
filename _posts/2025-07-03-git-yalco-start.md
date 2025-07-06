@@ -70,3 +70,16 @@ git config --global core.autocrlf true
 🔹 작업 가능한 Mac 장비가 없기 때문에 현재 영상 시청 X, 이 후 Mac OS 사용 시 컨텐츠 추가
 
 ---
+
+### **3. CLI vs GUI, 무엇을 사용?**
+
+- CLI <sup>Command Line Interface</sup>
+  - 터미널에 명령어를 이용하는 방식
+- GUI <sup>Graphic User Interface</sup>
+  - 소스트리 등의 프로그램을 사용하는 방식
+
+> 🧠 학습 추천 방식
+> - 공부할 때는 CLI 위주로 실습해서 명령어들과 동작 방식을 익히기
+> - 사용할 때는 작업의 성질에 따라 편리하고 유리한 것으로 유기적으로 혼용할 것
+
+---
