@@ -75,7 +75,7 @@ git config --global core.autocrlf true
 
 - CLI <sup>Command Line Interface</sup>
   - 터미널에 명령어를 이용하는 방식
-- GUI <sup>Graphic User Interface</sup>
+- GUI <sup>Graphical User Interface</sup>
   - 소스트리 등의 프로그램을 사용하는 방식
 
 > 🧠 학습 추천 방식
