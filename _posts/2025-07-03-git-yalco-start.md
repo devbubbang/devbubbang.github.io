@@ -57,7 +57,7 @@ git config --global core.autocrlf true
 > Git 뿐 아니라 다른 프로그래밍 작업에 있어서도 유용
 
 - VS Code에서 `Ctrl` + `Shift` + `P`
-- `Select Default Profiel` 검색하여 선택
+- `Select Default Profile` 검색하여 선택
 - **Git Bash** 선택
 - 터미널에서 `+`로 새 창을 열어서 기본으로 Git Bash가 설정된 것 확인
 - ➕ Git Bash를 **C 드라이브**에 설치해야 이 설정이 가능
@@ -81,5 +81,64 @@ git config --global core.autocrlf true
 > 🧠 학습 추천 방식
 > - 공부할 때는 CLI 위주로 실습해서 명령어들과 동작 방식을 익히기
 > - 사용할 때는 작업의 성질에 따라 편리하고 유리한 것으로 유기적으로 혼용할 것
+
+---
+
+### **4. Git 설정 & 프로젝트 관리하기**
+
+#### **Git 최초 설정**
+
+> 🔹 Git 전역으로 사용자 이름과 이메일 주소를 설정<br />
+> 🔹 GitHub 계정과는 별개
+
+- 터미널 프로그램 (Git Bash, iTerm2)에서 아래 명령어 실행
+
+```terminal
+git config --global user.name "(본인 이름)"
+git config --global user.email "(본인 이메일)"
+```
+
+- 아래의 명령어들로 확인
+
+```terminal
+git config --global user.name
+git config --global user.email
+```
+
+> 🔹 기본 브랜치명 변경<br />
+> 🔹 기존 master / slave 등의 용어로 주로 사용되었으나 변화하는 추세
+
+```terminal
+git config --global init.defaultBranch main
+```
+
+#### **프로젝트 생성 & Git 관리 시작**
+
+적당한 위치에 원하는 이름으로 폴더를 생성하고 코드 에디터 오픈
+
+해당 폴더에서 아래 명령어 입력
+
+```terminal
+git init
+```
+폴더에 숨김모드로 `.git` 폴더 생성 확인
+- ⚠️ 이 폴더를 지우면 Git 관리내역이 삭제 (현 파일들은 유지)
+- Mac에서 숨김 파일 보기 : `Command` + `shift` + `.`
+
+❗ 모든 작업(파일 생성, 수정)마다 파일을 꼭 **저장**
+
+```terminal
+git status
+> 현재 폴더의 상황을 Git의 관점으로 보여주는 명령어
+```
+
+#### **소스트리 사용해보기**
+
+> 현존하는 저장소 추가
+- 소스트리에 폴더를 드래그하거나, `로컬 저장소 추가`
+
+> Git이 관리하는 저장소 새로 만들기
+- `.git` 폴더 삭제 후 진행
+- 소스트리에 폴더를 드래그하거나, `로컬 저장소 생성 (Create)`
 
 ---
