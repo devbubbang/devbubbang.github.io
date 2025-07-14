@@ -67,3 +67,52 @@ git diff
 
 ---
 
+### **3. 과거로 돌아가기 실습**
+
+#### **실습 전 내역 백업**
+
+- `.git` 폴더 복사해두기
+  - 맥에서 숨김 파일 보기 : `command` + `shift` + `.`
+- `.git` 폴더 없앤 다음 git 상태 확인
+
+#### **reset 사용해서 과거로 돌아가기**
+
+```terminal
+git log
+> 커밋 내역 확인
+```
+- 되돌아갈 시점 : 커밋 해시 복사
+- `:q` 로 빠져나가기
+
+```terminal
+git reset --hard (돌아갈 커밋 해시)
+```
+- reset의 옵션 (--hard 등)은 섹션 5에서 다룸
+
+#### **reset 하기 전 시점으로 복원해보기**
+
+백업해둔 **.git** 폴더 사용
+- `.git` 폴더 복원
+- `git log`, `git status`로 상태 확인
+- 아래 명령어로 현 커밋 상태로 초기화
+```terminal
+git reset --hard
+```
+- 💡 뒤에 커밋 해시가 없으면 마지막 커밋을 가리킴
+
+#### **revert로 과거의 커밋 되돌리기**
+
+아래 명령어로 revert
+```terminal
+git revert (되돌릴 커밋 해시)
+```
+- `:wq` 로 커밋 메시지 저장
+
+💡 **커밋하지 않고** revert 하기
+```terminal
+git revert --no-commit (되돌릴 커밋 해시)
+```
+- 원하는 다른 작업을 추가한 다음 함께 커밋
+- 취소하려면 `git reset --hard`
+
+---
