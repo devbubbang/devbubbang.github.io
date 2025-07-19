@@ -103,3 +103,39 @@ git merge [서브 브랜치명]
 - 이 후 브랜치 삭제 동일하게 진행
 
 ---
+
+### **충돌 해결하기**
+
+#### **merge 충돌 해결하기**
+
+- **Accept Current Change**
+  - 현재 내 로컬의 변경 사항을 선택
+- **Accept Incoming Change**
+  - 외부(서브 브랜치/커밋)의 변경 사항을 선택
+- **Accept Both Changes**
+  - 두 변경 사항을 모두 반영
+- **Compare Changes**
+  - 두 변경 사항을 비교해서 확인
+
+💡 당장 충돌 해결이 어려울 경우 아래 명령어로 `merge` 중단
+```terminal
+git merge --abort
+```
+- 해결 가능 시 충돌 부분을 수정한 뒤 `git add .`, `git commit` 으로 병합 완료
+
+#### **rebase 충돌 해결하기**
+
+💡 `rebase`도 `merge`와 동일하게 당장 충돌 해결이 어려울 경우 아래 명령어로 중단
+```terminal
+git rebase --abort
+```
+
+- 해결 가능 시 충돌 부분을 수정한 뒤 `git add .` 까지는 동일
+- 📌 아래 명령어로 계속 이어나가야 하며, 충돌이 모두 해결될 때까지 진행.
+```terminal
+git rebase --continue
+```
+
+> 충돌 해결하여 `main` 까지 모두 반영이 되었다면, 서브 브랜치들은 제때 삭제해줘야 혼란을 줄일 수 있음.
+
+---
