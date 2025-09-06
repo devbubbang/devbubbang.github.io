@@ -52,7 +52,7 @@ git config --global core.autocrlf true
   - 프로그래밍 중 바로 Git 명령어 사용
   - 대부분의 타 에디터/IDE에서도 터미널 기능 제공
 
-#### **Windows - VS COde의 기본 터미널을 Git Bash로 설정**
+#### **Windows - VS Code의 기본 터미널을 Git Bash로 설정**
 
 > Git 뿐 아니라 다른 프로그래밍 작업에 있어서도 유용
 
@@ -67,7 +67,24 @@ git config --global core.autocrlf true
 
 #### **Mac**
 
-🔹 작업 가능한 Mac 장비가 없기 때문에 현재 영상 시청 X, 이 후 Mac OS 사용 시 컨텐츠 추가
+🔹 Mac은 기본적으로 git이 설치되어 있음
+
+- 협업시 윈도우와 맥에서 엔터 방식 차이로 인한 오류를 방지
+
+```text
+git config --global core.autocrlf input
+```
+
+🔹 iterm2 설치와 터미널 세팅
+
+- [https://iterm2.com/](https://iterm2.com/)에서 iTerm2 다운로드 및 설치
+  - 탭, split view, 자동완성 등 다양한 기능
+
+🔹 터미널의 테마와 스타일 설정 (아래중 택일)
+
+- [기본 설정](https://www.yalco.kr/_03_mac_terminal/)
+- [디테일 설정](https://yalco.notion.site/iTerm2-7866389fbcc449ebb07a587b8b761303)
+- [맥 터미널 꾸미기 oh-my-zsh](https://www.google.com/search?q=%EB%A7%A5+%ED%84%B0%EB%AF%B8%EB%84%90+%EA%BE%B8%EB%AF%B8%EA%B8%B0+oh-my-zsh&oq=%EB%A7%A5+%ED%84%B0%EB%AF%B8%EB%84%90+%EA%BE%B8%EB%AF%B8%EA%B8%B0+oh-my-zsh) 키워드로 검색
 
 ---
 
