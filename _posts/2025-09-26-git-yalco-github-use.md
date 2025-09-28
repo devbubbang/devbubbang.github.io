@@ -1,7 +1,7 @@
 ---
 title: GitHub 사용하기
 date: 2025-09-26 22:58:00 +0900
-categories: [Git, GitHub 사용하기]
+categories: [Git, 얄팍한 코딩사전]
 tags: [Git]
 toc: true
 ---
@@ -35,20 +35,20 @@ GitHub 등의 온라인 Git 저장소는 모든 업로드와 다운로드를 **�
 
 > 강의에서는 `HTTPS` 프로토콜을 사용
 
-```text
+```terminal
 git remote add origin (원격 저장소 주소)
 ```
 
 - 로컬의 Git 저장소에 원격 저장소로의 연결 추가
   - 원격 저장소 이름에 흔히 `origin` 사용. 다른 것으로 수정 가능
 
-```text
+```terminal
 git branch -M main
 ```
 
 - GitHub 권장: 기본 브랜치명을 `main`으로
 
-```text
+```terminal
 git push -u origin main 
 ```
 
@@ -62,7 +62,7 @@ git push -u origin main
 
 **🔹 참고 명령어**
 
-```text
+```terminal
 git remote: 원격 목록 보기
 git remote -v: 자세히 보기
 git remote remove (원격 이름): 원격 지우기 (로컬 프로젝트와의 연결만 없애는 것. GitHub의 레포지토리는 지워지지 않음)
@@ -75,7 +75,7 @@ git remote remove (원격 이름): 원격 지우기 (로컬 프로젝트와의 �
 
 > 터미널이나 Git Bash에서 대상 폴더 이동 후
 
-```text
+```terminal
 git clone (원격 저장소 주소)
 ```
 

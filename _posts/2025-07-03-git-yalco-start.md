@@ -31,10 +31,10 @@ toc: true
   - 리눅스/맥(유닉스)에서 사용되는 CLI 명령어들을 윈도우에서 사용 가능 > 타 프로그래밍에도 유용
   - 기본 설정된 그대로 설치 진행
 - 설치 후 Git Bash에서 아래 명령어로 테스트 진행
-```text
+```terminal
 git --version
 ```
-```text
+```terminal
 git config --global core.autocrlf true
 ```
 - 협업 시 윈도우와 맥에서 엔터 방식 차이로 인한 오류 방지
@@ -71,7 +71,7 @@ git config --global core.autocrlf true
 
 - 협업시 윈도우와 맥에서 엔터 방식 차이로 인한 오류를 방지
 
-```text
+```terminal
 git config --global core.autocrlf input
 ```
 
