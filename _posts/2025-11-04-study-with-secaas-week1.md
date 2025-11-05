@@ -160,3 +160,49 @@ public class DefaultSecurityConfig {
 - `BearerTokenAuthenticationFilter`: JWT/OAuth2 토큰을 처리함
 - `AuthorizationFilter`: 권한을 검사해 접근 허용 여부를 결정함
 - `ExceptionTranslationFilter`: 인증/권한 실패 시 401 또는 403 응답을 반환하거나 로그인 페이지로 리다이렉트함
+
+---
+
+### **3. Servlet Authentication Architecture**
+
+#### **SecurityContextHolder**
+
+- Spring Security는 현재 인증된 사용자의 정보를 `SecurityContextHolder`라는 컨테이너에 보관
+- 인증이 필요한 요청을 처리할 때, 여기 저장된 정보를 기반으로 권한을 판단
+
+#### **SecurityContext**
+
+- `SecurityContextHolder` 안에는 `SecurityContext`라는 객체가 들어 있고, 여기에 현재 사용자의 `Authentication` 정보가 들어 있음
+
+#### **Authentication**
+
+- 사용자의 인증 상태를 표현하는 인터페이스
+- 로그인 시도 시에는 아이디·비밀번호 같은 자격 증명이 담겨 있고, 인증 후에는 사용자 정보와 권한 목록이 채워짐
+- Spring Security는 `Authentication` 객체를 **필터 체인**에서 전달하며 인증을 시도
+
+#### **GrantedAuthority**
+
+- `ROLE_USER`, `ROLE_ADMIN` 같은 권한을 보관하는 곳
+- "이 기능은 관리자만 가능하다"고 설정하면, 이 목록에 해당 권한이 있는지 확인해 접근을 허용
+
+#### **AuthenticationManager**
+
+- 여러 종류의 인증 방식을 사용할 수 있도록, `AuthenticationProvider`들을 호출해 인증을 진행
+- 기본 구현체는 `ProviderManager`이며, 여러 Provider를 순차적으로 실행하면서 성공 여부를 판단
+
+#### **AuthenticationProvider**
+
+- 실제 인증 로직을 수행하는 모듈
+- 예를 들어 데이터베이스 기반 로그인(`DaoAuthenticationProvider`)이나 LDAP 로그인을 각각 다른 Provider로 구현
+- 각 Provider는 자신이 처리할 수 있는 유형의 인증인지 확인하고, 처리할 수 없다면 다음 Provider로 넘김
+
+#### **AuthenticationEntryPoint**
+
+- 인증이 필요하지만 아직 로그인하지 않은 사용자를 처리하는 지점
+- 인증되지 않은 사용자에게 로그인 페이지를 보여주거나, HTTP 401/403 같은 오류를 반환
+
+#### **AbstractAuthenticationProcessingFilter**
+
+- 인증 요청을 가로채는 필터
+- HTTP 요청에서 자격 증명을 추출하고 `AuthenticationManager`로 전달하는 기본 클래스
+- 예를 들어 `UsernamePasswordAuthenticationFilter`가 이 클래스를 상속해 아이디/비밀번호 로그인을 처리
