@@ -6,9 +6,9 @@ categories: [Development, Spring Boot]
 
 ### **JWT란?**
 
-> 정의: RFC 7519 웹 표준으로 지정되어 있고, Json 객체를 사용해서 토큰 자체에 정보들을 저장하고 있는 Web Token
+> 정의: [RFC 7519 웹 표준](https://datatracker.ietf.org/doc/html/rfc7519)으로 지정되어 있고, Json 객체를 사용해서 토큰 자체에 정보들을 저장하고 있는 Web Token
 
-JWT Token은 `Header`, `Payload`, `Signature` 로 구분(구성)
+**JWT Token은 `Header`, `Payload`, `Signature` 로 구분(구성)**
 
 - **Header:** Signature를 해싱하기 위한 알고리즘 정보들이 담겨 있음
 - **Payload:** 서버와 클라이언트가 주고 받는, 시스템에서 실제로 사용될 정보에 대한 내용들이 담겨 있음
