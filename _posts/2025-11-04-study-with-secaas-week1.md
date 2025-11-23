@@ -1,7 +1,7 @@
 ---
 title: Spring Boot, Spring Security
 date: 2025-11-04 22:41:00 +0900
-categories: [개발공부, 인증]
+categories: [Development, Spring]
 tags: [spring, 인증, secaas]
 toc: true
 ---

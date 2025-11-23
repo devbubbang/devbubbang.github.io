@@ -1,7 +1,7 @@
 ---
 title: "Docker의 기본 개념"
 date: 2025-04-23 20:42:00 +0900
-categories: [개발공부, Docker]
+categories: [Development, Docker]
 tags: [docker]
 toc: true
 ---

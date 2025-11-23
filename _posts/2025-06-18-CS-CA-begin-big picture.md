@@ -1,7 +1,7 @@
 ---
 title: "시작하기 | 컴퓨터구조의 큰 그림"
 date: 2025-06-17 21:10:00 +0900
-categories: [CS지식, Computer Architecture]
+categories: [CS Knowledgement, Computer Architecture]
 tags: [CS]
 toc: true
 mermaid: true

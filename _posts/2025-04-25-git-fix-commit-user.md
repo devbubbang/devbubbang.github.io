@@ -1,7 +1,7 @@
 ---
 title: 잘못된 Github 계정으로 커밋
 date: 2025-04-25 23:08:00 +0900
-categories: [Git - Min, 오답노트]
+categories: [Git, 오답노트]
 tags: [Git]
 toc: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: AIP란?
 date: 2025-05-26 21:17:00 +0900
-categories: [기획공부, 문서보안]
+categories: [Planning, Document Security]
 tags: [AIP]
 toc: true
 ---

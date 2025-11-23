@@ -1,7 +1,7 @@
 ---
 title: 데이터 | 0과 1로 숫자를 표현하는 방법
 date: 2025-06-23 21:44:00 +0900
-categories: [CS지식, Computer Architecture]
+categories: [CS Knowledgement, Computer Architecture]
 tags: [데이터, 표현]
 toc: true
 mermaid: true

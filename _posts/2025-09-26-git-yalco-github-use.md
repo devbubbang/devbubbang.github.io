@@ -1,7 +1,7 @@
 ---
 title: GitHub 사용하기
 date: 2025-09-26 22:58:00 +0900
-categories: [Git, 얄팍한 코딩사전]
+categories: [Git, 인프런]
 tags: [Git]
 toc: true
 ---
