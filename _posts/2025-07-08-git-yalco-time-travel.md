@@ -1,7 +1,7 @@
 ---
 title: 시간 여행하기
 date: 2025-07-08 22:17:00 +0900
-categories: [Git, 인프런]
+categories: [Git, Inflearn | Yalco]
 tags: [Git]
 toc: true
 ---

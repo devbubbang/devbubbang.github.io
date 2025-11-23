@@ -1,7 +1,7 @@
 ---
 title: Git 보다 깊이 알기
 date: 2025-10-13 21:04:00 +0900
-categories: [Git, 인프런]
+categories: [Git, Inflearn | Yalco]
 tags: [Git]
 toc: true
 ---

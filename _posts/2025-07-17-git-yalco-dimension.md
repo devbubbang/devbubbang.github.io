@@ -1,7 +1,7 @@
 ---
 title: 차원 넘나들기
 date: 2025-07-17 23:06:00 +0900
-categories: [Git, 인프런]
+categories: [Git, Inflearn | Yalco]
 tags: [Git]
 toc: true
 ---

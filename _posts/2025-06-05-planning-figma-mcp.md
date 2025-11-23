@@ -1,7 +1,7 @@
 ---
 title: Figma MCP
 date: 2025-06-05 22:46:00 +0900
-categories: [Planning, About Design]
+categories: [Planning, Design]
 tags: [기획]
 toc: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: 커밋 취소하기
 date: 2025-05-12 21:56:00 +0900
-categories: [Git, 오답노트]
+categories: [Git, FixNote]
 tags: [Git, Commit]
 toc: true
 ---

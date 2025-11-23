@@ -1,7 +1,7 @@
 ---
-title: Spring Boot, Spring Security
+title: 251106
 date: 2025-11-04 22:41:00 +0900
-categories: [Development, Spring]
+categories: [Development, With SECaaS]
 tags: [spring, 인증, secaas]
 toc: true
 ---

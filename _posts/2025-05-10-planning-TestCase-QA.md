@@ -1,7 +1,7 @@
 ---
 title: 초보 기획자/PM을 위한 Test Case 작성 및 QA 노하우
 date: 2025-05-10 22:27:00 +0900
-categories: [Planning, 인프런]
+categories: [Planning, SOFTCAMP]
 tags: [기획]
 toc: true
 ---

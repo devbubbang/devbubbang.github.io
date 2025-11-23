@@ -1,7 +1,7 @@
 ---
 title: Github에 IntelliJ 연동하기
 date: 2025-06-04 20:59:00 +0900
-categories: [Git, 기타]
+categories: [Git, Etc]
 tags: [Git]
 toc: true
 ---
