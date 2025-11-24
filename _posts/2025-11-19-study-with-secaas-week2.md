@@ -245,9 +245,9 @@ public class SecurityConfig {
 http://localhost:9000/oauth2/authorize?response_type=code&client_id={xxx..}&scope={xxx..}&redirect_uri={xxx..}
 ```
 
-![img1](img/authorization_token_request.png)
+![img1](/assets/img/authorization_token_request.png)
 - profile 체크
 - Submit Consent 클릭
-![img2](img/Authorization_token_response.png)
+![img2](/assets/img/Authorization_token_response.png)
 - 도메인의 `code=` 뒤에 처음 보는 긴 문자열 생성 확인
   - 해당 문자열이 토큰이 정상적으로 발행되었다는 뜻
