@@ -251,3 +251,53 @@ http://localhost:9000/oauth2/authorize?response_type=code&client_id={xxx..}&scop
 ![img2](/assets/img/Authorization_token_response.png)
 - 도메인의 `code=` 뒤에 처음 보는 긴 문자열 생성 확인
   - 해당 문자열이 토큰이 정상적으로 발행되었다는 뜻
+
+---
+
+### 추가 이해 내용
+
+- 잘못된 이해 포인트
+  - 도메인 내 Redirect URL의 `code=...` 부분 생성된 문자열을 **"Token이 발행되었다"** 로 인식
+    - 그러나 이는 단순한 **Authorization Code**가 발급된 것
+  - **실제 Token은 발급된 code 값을 이용하여 요청한다.**
+
+### 흐름 정리
+
+**요청 URL**
+```bash
+http://localhost:9000/oauth2/authorize?response_type=code&client_id=oidc-client&scope=openid%20profile&redirect_uri=http://127.0.0.1:8080/login/oauth2/code/oidc-client
+```
+
+1. 브라우저 접속
+2. 로그인 Form에서 로그인 진행
+   - 하드코딩했던 ID / PW (byungjunmin / 1q2w3e4r)
+3. Consent 화면에서 profile 체크 후 submit
+4. Redirect Uri로 이동하며 code 전달
+5. 위에서 발행된 code 값을 이용해 Access Token 요청
+   - 문자열 복사하여 하위 `발급받은_code값` 위치에 붙여넣기
+
+**curl 명령어 방식 이용**
+
+```bash
+curl -X POST "http://localhost:9000/oauth2/token" \         //인증 서버의 토큰 발급 엔드포인트
+ -H "Content-Type: application/x-www-form-urlencoded" \     //헤더 --> 전송하는 데이터가 어떤 형식임을 명시 
+ -u "oidc-client:secret" \                                
+ -d "grant_type=authorization_code" \                        //데이터 --> 현재 요청이 authorization code를 통한 토큰 교환임을 서버에 알림
+ -d "code=발급받은_code값" \                                   //데이터 --> 이전 단계에서 발행된 code 값
+ -d "redirect_uri=http://127.0.0.1:8080/login/oauth2/code/oidc-client"      //데이터 --> 보안 검증용 필드
+```
+
+**성공 응답 확인**
+
+![](../assets/img/access_token_check.png)
+
+```json
+{"access_token":"eyJraWQiOiJkYTdjMTI2Yi04NDliLTQ4YjYtOTE1NC1kMjdiM2ZmOWM3MGUiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJieXVuZ2p1bm1pbiIsImF1ZCI6Im9pZGMtY2xpZW50IiwibmJmIjoxNzY0MDc1OTM1LCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIl0sImlzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6OTAwMCIsImV4cCI6MTc2NDA3NjIzNSwiaWF0IjoxNzY0MDc1OTM1LCJqdGkiOiI5ZTVjNmJmNC0xZDFkLTQyNjEtOGQ2Mi05ODhhNWNkZTFhMzkifQ.ug4AkPccRdZXMFtrogz366m1c67vIq-uHJWbI_0OcAgloThAKbpU_FMykK63W50c--oqCeqdWbyl8sTIJLwCl-dCXx-b250OTQffCTgCSfO-MXQVAYeUinv4zB7mAo63TWOWObGm_uPTiKpa5ogfdjjIVQMGMF0Zlz9XJCsKVftXJ6js3sUfBZ7M5nbCmkYy0jkq7PQ6g68-2bPMc_kLp-BJyxcRrEIQOk3FIVTBJ4j1QReVVVcUIwvJ4X1ui7TouefVr2FSDP6JTLZElUMYqv4sbWWWet4WdWSCRpnkLu3IlP_GlRQpbiZS-enOKRluwoy041XnOkMZ1nQIEPtWzg", 
+  "refresh_token":"ObAh2on3ICwvklGA7BwyvYA-5VhXzhrPTuFOMlb3Gnr788kpxTOCVj0vGcOQvc6fu9N8PC8_f3HCrxcp4Ky0UMDB3HzF330HF1vDNnEfsc-7K9RggVXaipLJYXq-KeHc",
+  "scope":"openid profile",
+  "id_token":"eyJraWQiOiJkYTdjMTI2Yi04NDliLTQ4YjYtOTE1NC1kMjdiM2ZmOWM3MGUiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJieXVuZ2p1bm1pbiIsImF1ZCI6Im9pZGMtY2xpZW50IiwiYXpwIjoib2lkYy1jbGllbnQiLCJhdXRoX3RpbWUiOjE3NjQwNzU5MTYsImlzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6OTAwMCIsImV4cCI6MTc2NDA3NzczNSwiaWF0IjoxNzY0MDc1OTM1LCJqdGkiOiI5NmU2NjZmMy1hM2NmLTQxMjQtYTZmYy05MmU0MjUyY2I4YjAiLCJzaWQiOiJmLUJEcTZma3B4T2ppaVVGcjVDUlU3X3JuRlUyR0w2cmY1ajNMWTNkQl9nIn0.FiMjnZB9b96lexSoS6IoY38OBZqahOaja2IOtd-8JAs-XQVWFqgv1yFuO1AixUN1-naLHzkrQy--NmniAFsAjgobNGI2mVVIxH32BmZO3zyy1HYzzJFh_mwRtyNkVF4CKuK10JWgWcjqpDiTcqtvBDDLiPmexmjM5GTFnLM6VrDqD-P10uFvvPBpl5tkEfamu-UMZ9M23RqqzY0eyUwOck8I3xKkrlfw1YkTLmiwO4Yde_DBEYrS52ns8UORjQd1Qk824ReJYNAM7UO707-fi2-a2y3qZeyVJ5lP-DMUSzw-bpfiml_6BxFy7LiUvNxHDuCf6G5JvRoBYf9tbkMZQA",
+  "token_type":"Bearer",
+  "expires_in":299}
+```
+
+---
