@@ -17,6 +17,11 @@ toc: true
 
 ### **프로젝트 생성하기**
 
+> IntelliJ Community Edition과 Ultimate Edition의 주요 차이점은 **웹 관련 기술 지원 범위**<br/>
+
+> Community 버전은 Java 등 기본 기능에 초점을 맞추고, Ultimate 버전은 Spring, JSP 등 다양한 웹 관련 기술들을 추가로 지원하는 유료 버전.
+
+
 - **프로젝트 생성**
   - 템플릿 선택: Maven, Gradle 같은 빌드 환경 선택을 추천
   - 의존성 `dependency` 관리 환경을 사용하지 않으면 불편한 점이 많음
