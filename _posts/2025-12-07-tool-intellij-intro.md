@@ -1,5 +1,5 @@
 ---
-title: 소개
+title: 소개 (Intro)
 date: 2025-12-07 21:35:00 +0900
 categories: [Tool, IntelliJ]
 tags: [IntelliJ]

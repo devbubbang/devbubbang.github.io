@@ -1,5 +1,5 @@
 ---
-title: 코드 Edit
+title: 코드 Edit (Code Edit)
 date: 2025-12-08 22:29:00 +0900
 categories: [Tool, IntelliJ]
 tags: [IntelliJ]
