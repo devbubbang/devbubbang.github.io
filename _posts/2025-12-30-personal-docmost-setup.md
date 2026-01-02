@@ -99,3 +99,79 @@ docker compose ps
 ---
 
 ### **외부 접속을 위한 ngrok 설정**
+
+#### **ngrok 설치**
+```bash
+brew install ngrok/ngrok/ngrok
+```
+
+버전 확인:
+```bash
+ngrok version
+```
+
+#### **ngrok 계정 연결**
+
+1. [https://ngrok.com](https://ngrok.com) 가입
+2. Dashboarad -> Authtoken 복사
+```bash
+ngrok config add-authtoken <토큰>
+```
+
+#### **Docmost 외부 공개**
+
+```bash
+ngrok http 3001
+```
+
+출력 예시:
+```text
+Forwarding https://xxxx.ngrok-free.dev -> http://localhost:3001
+```
+이 `https://xxx.ngrok-free.dev` 주소가 **외부 접속 주소**
+
+### **APP_URL 변경 (중요)**
+
+Docmost는 초대 링크 / 리다이렉트에 `APP_URL`을 사용함
+
+#### **docker-compose.yml 수정**
+
+```yaml
+APP_URL: https://xxxx.ngrok-free.dev
+```
+
+#### **Docmost 재시작 (필수)**
+
+```bash
+docker compose down
+docker compose up -d
+```
+
+### **Member 초대**
+
+1. Docmost 접속 (ngrok 주소)
+2. Space settings -> Members
+3. Invite
+4. 이메일 초대 또는 초대 링크 공유
+   - 초대 후 `더보기 버튼 (...)` 눌러 링크 복사
+
+### **주의 사항 정리**
+
+#### **localhost는 외부에서 접속 절대 불가**
+
+- 반드시 ngrok / Cloudflare Tunnel / 서버 필요
+
+#### **APP_URL은 내부 포트 기준이 아님**
+
+- 항상 **사용자가 접속하는 주소 기준**
+
+#### **DATABASE_URL 비밀번호 불일치 주의**
+
+- DB 설정과 다르면 Docmost는 떠도 내부 에러 발생
+
+#### **ngrok 무료 플랜 주의**
+
+- URL 재시작 시 변경될 수 있음
+- Mac 종료 시 서버 종료
+
+---
