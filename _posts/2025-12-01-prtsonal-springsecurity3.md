@@ -1,7 +1,7 @@
 ---
 title: 251126 | Authorization Code를 통한 Token 발급 Flow (디버깅)
 date: 2025-12-01 23:06:00 +0900
-categories: [Development, With SECaaS]
+categories: [Personal, Spring Security]
 tags: [spring, 인증, 디버깅]
 toc: true
 ---

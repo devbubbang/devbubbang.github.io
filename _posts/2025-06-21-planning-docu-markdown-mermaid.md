@@ -1,7 +1,7 @@
 ---
 title: Mermaid 문법
 date: 2025-06-21 15:45:00 +0900
-categories: [Planning, Docs Management]
+categories: [Personal, Tips]
 tags: [기획, mermaid]
 toc: true
 mermaid: true

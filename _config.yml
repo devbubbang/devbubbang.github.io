@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Min-log # the main title
 
-tagline: 성장 일지🚀🔥 # it will display as the subtitle
+tagline: 성장 기록🔥 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   IT Knowledgement, License, etc Management Space
@@ -98,7 +98,7 @@ theme_mode: dark # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/min_dev.webp
+avatar: /assets/img/min_profile.jpeg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.

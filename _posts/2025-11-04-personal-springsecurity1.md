@@ -1,7 +1,7 @@
 ---
 title: 251106
 date: 2025-11-04 22:41:00 +0900
-categories: [Development, With SECaaS]
+categories: [Personal, Spring Security]
 tags: [spring, 인증, secaas]
 toc: true
 ---

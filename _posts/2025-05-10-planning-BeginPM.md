@@ -1,7 +1,7 @@
 ---
 title: 시작하는 PM들을 위한 필수지식
 date: 2025-05-10 22:24:00 +0900
-categories: [Planning, SOFTCAMP]
+categories: [SOFTCAMP, Study]
 tags: [기획]
 toc: true
 ---
