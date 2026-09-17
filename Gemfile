@@ -3,7 +3,7 @@ gem "jekyll", "~> 4.3"
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-chirpy", "~> 7.2", ">= 7.2.4"
+gem "jekyll-theme-chirpy", "~> 7.3.1" # 7.6.0부터 _sass 커스터마이징과 충돌 (2026-09-17)
 
 gem "html-proofer", "~> 5.0", group: :test
 
